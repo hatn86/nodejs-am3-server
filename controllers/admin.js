@@ -124,11 +124,7 @@ exports.productAdd = async (req, res, next) => {
 
     for (let i = 0; i < n; i++) {
       let path = files[i].path.replace("\\", "/").trim();
-      path =
-        process.env.ADDRESS +
-        (process.env.PORT ? ":" + process.env.PORT : "") +
-        "/" +
-        path;
+      path = process.env.ADDRESS + "/" + path;
       product["img" + (i + 1)] = path;
     }
 
