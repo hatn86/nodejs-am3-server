@@ -143,6 +143,7 @@ exports.login = async (req, res, next) => {
       httpOnly: true,
       domain: "localhost",
       SameSite: "None",
+      secure: true,
     });
 
     // refresh token
@@ -151,6 +152,7 @@ exports.login = async (req, res, next) => {
       httpOnly: true,
       domain: "localhost",
       SameSite: "None",
+      secure: true,
     });
 
     // refresh_token_id luu trong db
@@ -159,6 +161,7 @@ exports.login = async (req, res, next) => {
       httpOnly: true,
       domain: "localhost",
       SameSite: "None",
+      secure: true,
     });
 
     return res.status(200).json({
@@ -193,6 +196,7 @@ exports.logout = async (req, res, next) => {
       maxAge: 5000,
       httpOnly: true,
       SameSite: "None",
+      secure: true,
     });
 
     // xoa refresh token cookie
@@ -200,6 +204,7 @@ exports.logout = async (req, res, next) => {
       maxAge: 5000,
       httpOnly: true,
       SameSite: "None",
+      secure: true,
     });
 
     // xoa refresh token id cookie
@@ -207,6 +212,7 @@ exports.logout = async (req, res, next) => {
       maxAge: 5000,
       httpOnly: true,
       SameSite: "None",
+      secure: true,
     });
 
     // lay refresh_token_id
@@ -273,6 +279,7 @@ exports.refreshToken = async (req, res, next) => {
         httpOnly: true,
         domain: "localhost",
         SameSite: "None",
+        secure: true,
       });
 
       // refresh token
@@ -281,6 +288,7 @@ exports.refreshToken = async (req, res, next) => {
         httpOnly: true,
         domain: "localhost",
         SameSite: "None",
+        secure: true,
       });
 
       // refresh_token_id luu trong db
@@ -289,6 +297,7 @@ exports.refreshToken = async (req, res, next) => {
         httpOnly: true,
         domain: "localhost",
         SameSite: "None",
+        secure: true,
       });
 
       return res.status(200).json({ message: "Generate token successful" });
