@@ -151,7 +151,7 @@ exports.login = async (req, res, next) => {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
       //domain: "hatn86.github.io",
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
 
@@ -160,7 +160,7 @@ exports.login = async (req, res, next) => {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
       //domain: "hatn86.github.io",
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
 
@@ -195,7 +195,7 @@ exports.logout = async (req, res, next) => {
     res.cookie("access_token", "none", {
       maxAge: 5000,
       httpOnly: true,
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
 
@@ -203,7 +203,7 @@ exports.logout = async (req, res, next) => {
     res.cookie("refresh_token", "none", {
       maxAge: 5000,
       httpOnly: true,
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
 
@@ -211,7 +211,7 @@ exports.logout = async (req, res, next) => {
     res.cookie("refresh_token_id", "none", {
       maxAge: 5000,
       httpOnly: true,
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
 
@@ -278,7 +278,7 @@ exports.refreshToken = async (req, res, next) => {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
         //domain: "hatn86.github.io",
-        SameSite: "None",
+        sameSite: "None",
         secure: true,
       });
 
@@ -287,7 +287,7 @@ exports.refreshToken = async (req, res, next) => {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
         //domain: "hatn86.github.io",
-        SameSite: "None",
+        sameSite: "None",
         secure: true,
       });
 
@@ -296,7 +296,7 @@ exports.refreshToken = async (req, res, next) => {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
         //domain: "hatn86.github.io",
-        SameSite: "None",
+        sameSite: "None",
         secure: true,
       });
 
