@@ -142,7 +142,7 @@ exports.login = async (req, res, next) => {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
       //domain: "hatn86.github.io",
-      SameSite: "None",
+      sameSite: "None",
       secure: true,
     });
 
