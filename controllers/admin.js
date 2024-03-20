@@ -203,10 +203,7 @@ exports.productDelete = async (req, res, next) => {
     }
 
     // xoa image khoi server
-    const http =
-      process.env.ADDRESS +
-      (process.env.PORT ? ":" + process.env.PORT : "") +
-      "/";
+    const http = process.env.ADDRESS + "/";
 
     if (product.img1) {
       clearImage(product.img1.replace(http, "").replace("/", "\\"));
