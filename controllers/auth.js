@@ -142,6 +142,7 @@ exports.login = async (req, res, next) => {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
       domain: "localhost",
+      SameSite: "None",
     });
 
     // refresh token
@@ -149,6 +150,7 @@ exports.login = async (req, res, next) => {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
       domain: "localhost",
+      SameSite: "None",
     });
 
     // refresh_token_id luu trong db
@@ -156,6 +158,7 @@ exports.login = async (req, res, next) => {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
       domain: "localhost",
+      SameSite: "None",
     });
 
     return res.status(200).json({
@@ -189,18 +192,21 @@ exports.logout = async (req, res, next) => {
     res.cookie("access_token", "none", {
       maxAge: 5000,
       httpOnly: true,
+      SameSite: "None",
     });
 
     // xoa refresh token cookie
     res.cookie("refresh_token", "none", {
       maxAge: 5000,
       httpOnly: true,
+      SameSite: "None",
     });
 
     // xoa refresh token id cookie
     res.cookie("refresh_token_id", "none", {
       maxAge: 5000,
       httpOnly: true,
+      SameSite: "None",
     });
 
     // lay refresh_token_id
@@ -266,6 +272,7 @@ exports.refreshToken = async (req, res, next) => {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
         domain: "localhost",
+        SameSite: "None",
       });
 
       // refresh token
@@ -273,6 +280,7 @@ exports.refreshToken = async (req, res, next) => {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
         domain: "localhost",
+        SameSite: "None",
       });
 
       // refresh_token_id luu trong db
@@ -280,6 +288,7 @@ exports.refreshToken = async (req, res, next) => {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
         domain: "localhost",
+        SameSite: "None",
       });
 
       return res.status(200).json({ message: "Generate token successful" });
