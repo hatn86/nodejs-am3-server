@@ -144,6 +144,7 @@ exports.login = async (req, res, next) => {
       //domain: "hatn86.github.io",
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
 
     // refresh token
@@ -153,6 +154,7 @@ exports.login = async (req, res, next) => {
       //domain: "hatn86.github.io",
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
 
     // refresh_token_id luu trong db
@@ -162,6 +164,7 @@ exports.login = async (req, res, next) => {
       //domain: "hatn86.github.io",
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
 
     return res.status(200).json({
@@ -197,6 +200,7 @@ exports.logout = async (req, res, next) => {
       httpOnly: true,
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
 
     // xoa refresh token cookie
@@ -205,6 +209,7 @@ exports.logout = async (req, res, next) => {
       httpOnly: true,
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
 
     // xoa refresh token id cookie
@@ -213,6 +218,7 @@ exports.logout = async (req, res, next) => {
       httpOnly: true,
       sameSite: "None",
       secure: true,
+      partitioned: true,
     });
 
     // lay refresh_token_id
@@ -280,6 +286,7 @@ exports.refreshToken = async (req, res, next) => {
         //domain: "hatn86.github.io",
         sameSite: "None",
         secure: true,
+        partitioned: true,
       });
 
       // refresh token
@@ -289,6 +296,7 @@ exports.refreshToken = async (req, res, next) => {
         //domain: "hatn86.github.io",
         sameSite: "None",
         secure: true,
+        partitioned: true,
       });
 
       // refresh_token_id luu trong db
@@ -298,6 +306,7 @@ exports.refreshToken = async (req, res, next) => {
         //domain: "hatn86.github.io",
         sameSite: "None",
         secure: true,
+        partitioned: true,
       });
 
       return res.status(200).json({ message: "Generate token successful" });
