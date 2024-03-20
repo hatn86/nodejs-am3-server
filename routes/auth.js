@@ -37,7 +37,6 @@ router.post(
     // validate phone number
     body("tel")
       .trim()
-      .not()
       .isEmpty()
       .withMessage("Phone number cannot be empty.")
       .custom((val) => {
