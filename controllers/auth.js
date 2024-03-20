@@ -141,7 +141,7 @@ exports.login = async (req, res, next) => {
     res.cookie("access_token", token, {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
-      domain: "localhost",
+      //domain: "hatn86.github.io",
       SameSite: "None",
       secure: true,
     });
@@ -150,7 +150,7 @@ exports.login = async (req, res, next) => {
     res.cookie("refresh_token", refreshToken, {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
-      domain: "localhost",
+      //domain: "hatn86.github.io",
       SameSite: "None",
       secure: true,
     });
@@ -159,7 +159,7 @@ exports.login = async (req, res, next) => {
     res.cookie("refresh_token_id", resToken._id.toString(), {
       maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
       httpOnly: true,
-      domain: "localhost",
+      //domain: "hatn86.github.io",
       SameSite: "None",
       secure: true,
     });
@@ -277,7 +277,7 @@ exports.refreshToken = async (req, res, next) => {
       res.cookie("access_token", access_token, {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
-        domain: "localhost",
+        //domain: "hatn86.github.io",
         SameSite: "None",
         secure: true,
       });
@@ -286,7 +286,7 @@ exports.refreshToken = async (req, res, next) => {
       res.cookie("refresh_token", refreshToken, {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
-        domain: "localhost",
+        //domain: "hatn86.github.io",
         SameSite: "None",
         secure: true,
       });
@@ -295,7 +295,7 @@ exports.refreshToken = async (req, res, next) => {
       res.cookie("refresh_token_id", token._id.toString(), {
         maxAge: +process.env.JSON_WEB_REFRESH_TOKEN_EXPIRESIN,
         httpOnly: true,
-        domain: "localhost",
+        //domain: "hatn86.github.io",
         SameSite: "None",
         secure: true,
       });
