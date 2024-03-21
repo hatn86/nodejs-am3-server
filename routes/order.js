@@ -11,13 +11,15 @@ router.post(
   "/",
   isAuth,
   [
-    body("name").isLength({ min: 1 }).withMessage("Full name cannot be empty"),
+    body("fullName")
+      .isLength({ min: 1 })
+      .withMessage("Full name cannot be empty"),
     body("email")
       .trim()
       .isEmail()
       .withMessage("Please enter a valid email.")
       .normalizeEmail(),
-    body("phone")
+    body("phoneNumber")
       .trim()
       .isEmpty()
       .withMessage("Phone number cannot be empty.")
