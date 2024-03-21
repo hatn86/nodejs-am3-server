@@ -37,7 +37,7 @@ router.post(
     // validate phone number
     body("tel")
       .trim()
-      .isEmpty()
+      .isLength({ min: 1 })
       .withMessage("Phone number cannot be empty.")
       .custom((val) => {
         // Vietnamese phone number format
